@@ -106,7 +106,7 @@ static void lattice(ClimateNoises *n, uint64_t seed, double max_a, int sign,
           }
         }
       if (max > 2.4) {
-        print_result(seed, max_x * 4, max_z * 4, max * sign);
+        print_result(seed, max_x, max_z, max * sign);
       }
     }
 }
