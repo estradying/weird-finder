@@ -11,6 +11,7 @@
 
 #define THREADS 12
 #define BATCH_SIZE 16384
+#define THRESHOLD 2.4
 
 typedef struct {
   BiomeNoise *t, *h, *c, *e, *w;
@@ -105,7 +106,7 @@ static void lattice(ClimateNoises *n, uint64_t seed, double max_a, int sign,
             max_z = z2;
           }
         }
-      if (max > 2.4) {
+      if (max > THRESHOLD) {
         print_result(seed, max_x, max_z, max * sign);
       }
     }
